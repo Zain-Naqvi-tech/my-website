@@ -250,19 +250,7 @@
                 ctx.fill();
             });
 
-            // travelling signal pulses
-            pulses.forEach((p) => {
-                p.t += p.speed;
-                if (p.t > 1) p.t = 0;
-                const pos = pointAt(traces[p.trace].points, p.t);
-                const grad = ctx.createRadialGradient(pos.x, pos.y, 0, pos.x, pos.y, 7);
-                grad.addColorStop(0, 'rgba(83, 214, 255, 0.85)');
-                grad.addColorStop(1, 'rgba(83, 214, 255, 0)');
-                ctx.fillStyle = grad;
-                ctx.beginPath();
-                ctx.arc(pos.x, pos.y, 7, 0, Math.PI * 2);
-                ctx.fill();
-            });
+            // travelling signal pulses — REMOVED
 
             requestAnimationFrame(draw);
         };
