@@ -4,571 +4,269 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zain Naqvi — Firmware &amp; Embedded Systems Engineer</title>
-    <meta name="description" content="Portfolio of Zain Naqvi — Computer Engineering student at McMaster University specializing in firmware, embedded systems, and robotics.">
+    <meta name="description" content="Zain Naqvi — Computer Engineering student specializing in firmware, embedded systems, and robotics.">
 
-    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="css/style.css">
-
-    <!-- Favicon: simple chip glyph (inline SVG, no extra file needed) -->
-    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='8' y='8' width='16' height='16' rx='2' fill='%2353d6ff'/%3E%3Crect x='12' y='12' width='8' height='8' fill='%230a0e14'/%3E%3C/svg%3E">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ctext x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' font-size='22' fill='%23f2f2f0' font-family='Georgia,serif'%3EZ%3C/text%3E%3C/svg%3E">
 </head>
 <body>
 
-    <!-- ================= CURSOR EFFECT (desktop only, see js/main.js) ================= -->
-    <div class="cursor-dot" id="cursor-dot" aria-hidden="true"></div>
-    <div class="cursor-ring" id="cursor-ring" aria-hidden="true"></div>
-
-    <!-- ================= NAVIGATION ================= -->
+    <!-- ================= HEADER ================= -->
     <header class="nav" id="nav">
         <div class="nav-inner">
-            <a href="#home" class="nav-logo" aria-label="Home">
-                <span class="logo-chip">ZN</span>
-                <span class="logo-text">zain<span class="logo-dot">.</span>naqvi</span>
-            </a>
-            <nav class="nav-links" id="nav-links" aria-label="Primary">
-                <a href="#home" class="nav-link active">Home</a>
-                <a href="#about" class="nav-link">About</a>
-                <a href="#education" class="nav-link">Education</a>
-                <a href="#experience" class="nav-link">Experience</a>
-                <a href="#projects" class="nav-link">Projects</a>
-                <a href="#skills" class="nav-link">Skills</a>
-                <a href="#contact" class="nav-link">Contact</a>
-            </nav>
-            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
-                <span></span><span></span><span></span>
-            </button>
+            <a href="#top" class="brand">Zain Naqvi</a>
+
+            <div class="nav-right">
+                <nav class="nav-links" id="nav-links" aria-label="Primary">
+                    <a href="#work" class="nav-link">Work</a>
+                    <a href="#about" class="nav-link">About</a>
+                    <a href="#contact" class="nav-link">Contact</a>
+                </nav>
+
+                <!-- ===== socials, stacked top-right ===== -->
+                <div class="socials">
+                    <!-- PLACEHOLDER: LinkedIn URL -->
+                    <a href="https://www.linkedin.com/in/212z212" class="social" target="_blank" rel="noopener" aria-label="LinkedIn">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-5c0-2.76-2.24-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.27c-.97 0-1.75-.79-1.75-1.76s.78-1.75 1.75-1.75 1.75.78 1.75 1.75-.78 1.76-1.75 1.76zm13.5 12.27h-3v-5.6c0-3.37-4-3.11-4 0v5.6h-3v-11h3v1.77c1.4-2.59 7-2.78 7 2.47v6.76z"/></svg>
+                    </a>
+                    <!-- PLACEHOLDER: GitHub URL -->
+                    <a href="https://github.com/Zain-Naqvi-tech" class="social" target="_blank" rel="noopener" aria-label="GitHub">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.63 0-12 5.37-12 12 0 5.3 3.44 9.8 8.21 11.39.6.11.82-.26.82-.58 0-.28-.01-1.04-.02-2.04-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.33-1.76-1.33-1.76-1.09-.74.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.83 2.81 1.3 3.49 1 .11-.78.42-1.31.76-1.61-2.66-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.18 0 0 1-.32 3.3 1.23.96-.27 1.98-.4 3-.4s2.04.13 3 .4c2.28-1.55 3.29-1.23 3.29-1.23.66 1.66.24 2.88.12 3.18.77.84 1.23 1.91 1.23 3.22 0 4.61-2.81 5.62-5.49 5.92.43.37.81 1.1.81 2.22 0 1.61-.01 2.9-.01 3.29 0 .32.21.7.82.58 4.77-1.59 8.2-6.09 8.2-11.39 0-6.63-5.37-12-12-12z"/></svg>
+                    </a>
+                    <!-- PLACEHOLDER: Notion URL -->
+                    <a href="#" class="social" target="_blank" rel="noopener" aria-label="Notion">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.46 4.21c.65.53 1.07.5 2.4.41l13.07-.78c.28 0 .05-.28-.05-.32l-2.17-1.57c-.42-.32-.97-.69-2.03-.6L3.04 2.3c-.46.05-.55.28-.37.46l1.79 1.45zm.69 2.68v13.75c0 .74.37 1.02 1.2.97l14.37-.83c.83-.05.92-.56.92-1.16V5.96c0-.6-.23-.92-.74-.88l-15.01.88c-.55.05-.74.32-.74.93zm14.18.69c.09.42 0 .83-.42.88l-.7.14v10.26c-.6.32-1.16.51-1.62.51-.74 0-.93-.23-1.48-.93l-4.53-7.12v6.89l1.44.33s0 .83-1.15.83l-3.19.18c-.09-.18 0-.65.32-.74l.84-.23v-9.19l-1.16-.1c-.09-.41.14-1.01.79-1.06l3.42-.23 4.71 7.21v-6.38l-1.2-.14c-.09-.51.28-.88.74-.92l3.19-.19zM2.85 1.1l13.16-.97c1.62-.14 2.03-.05 3.05.69l4.2 2.96c.7.51.93.65.93 1.2v16.22c0 1.02-.37 1.62-1.66 1.71l-15.29.92c-.97.05-1.43-.09-1.94-.74l-3.1-4.02c-.55-.74-.78-1.29-.78-1.94V2.72c0-.83.37-1.52 1.43-1.62z"/></svg>
+                    </a>
+                </div>
+
+                <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+                    <span></span><span></span>
+                </button>
+            </div>
         </div>
     </header>
 
-    <main>
+    <main id="top">
 
-    <!-- ================= HOME / HERO ================= -->
-    <section class="hero" id="home">
-        <canvas id="pcb-canvas" class="pcb-canvas" aria-hidden="true"></canvas>
-        <div class="hero-inner container">
+    <!-- ================= HERO ================= -->
+    <section class="hero">
+        <div class="container hero-inner">
             <div class="hero-text">
-                <p class="hero-pre mono reveal">// firmware · embedded systems · robotics</p>
-
-                <!-- EASTER EGG: clicking the name 5 times launches a hidden mini-game -->
-                <h1 class="hero-name reveal" id="hero-name" title="">
-                    Zain<br>Naqvi
-                </h1>
-
-                <p class="hero-sub mono reveal">
-                    <span class="prompt">&gt;</span> <span id="typed"></span><span class="caret">▌</span>
-                </p>
-
-                <p class="hero-blurb reveal">
-                    Computer Engineering student at McMaster University building reliable
-                    firmware, embedded hardware, and autonomous systems — from PCB to protocol stack.
-                </p>
-
+                <p class="eyebrow reveal">Computer Engineering · McMaster University</p>
+                <!-- EASTER EGG: click the name 5× -->
+                <h1 class="hero-name reveal" id="hero-name">Zain&nbsp;Naqvi</h1>
+                <p class="hero-role reveal">Firmware &amp; embedded systems engineer — I build the low-level
+                    code that brings hardware to life, and design the boards it runs on.</p>
                 <div class="hero-actions reveal">
-                    <a href="#projects" class="btn btn-primary">View Projects</a>
-                    <a href="#contact" class="btn btn-ghost">Get in Touch</a>
-                </div>
-
-                <div class="hero-socials reveal">
-                    <!-- ===== PLACEHOLDER: replace href with your LinkedIn URL ===== -->
-                    <a href="https://www.linkedin.com/in/212z212" class="social-btn" target="_blank" rel="noopener" aria-label="LinkedIn">
-                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-5c0-2.76-2.24-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.27c-.97 0-1.75-.79-1.75-1.76s.78-1.75 1.75-1.75 1.75.78 1.75 1.75-.78 1.76-1.75 1.76zm13.5 12.27h-3v-5.6c0-3.37-4-3.11-4 0v5.6h-3v-11h3v1.77c1.4-2.59 7-2.78 7 2.47v6.76z"/></svg>
-                        <span class="mono">LinkedIn</span>
-                    </a>
-                    <!-- ===== PLACEHOLDER: replace href with your GitHub URL ===== -->
-                    <a href="https://github.com/Zain-Naqvi-tech" class="social-btn" target="_blank" rel="noopener" aria-label="GitHub">
-                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.63 0-12 5.37-12 12 0 5.3 3.44 9.8 8.21 11.39.6.11.82-.26.82-.58 0-.28-.01-1.04-.02-2.04-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.33-1.76-1.33-1.76-1.09-.74.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.83 2.81 1.3 3.49 1 .11-.78.42-1.31.76-1.61-2.66-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.18 0 0 1-.32 3.3 1.23.96-.27 1.98-.4 3-.4s2.04.13 3 .4c2.28-1.55 3.29-1.23 3.29-1.23.66 1.66.24 2.88.12 3.18.77.84 1.23 1.91 1.23 3.22 0 4.61-2.81 5.62-5.49 5.92.43.37.81 1.1.81 2.22 0 1.61-.01 2.9-.01 3.29 0 .32.21.7.82.58 4.77-1.59 8.2-6.09 8.2-11.39 0-6.63-5.37-12-12-12z"/></svg>
-                        <span class="mono">GitHub</span>
-                    </a>
-                    <!-- ===== PLACEHOLDER: replace href="#" with your Notion portfolio URL ===== -->
-                    <a href="#" class="social-btn" target="_blank" rel="noopener" aria-label="Notion">
-                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.46 4.21c.65.53 1.07.5 2.4.41l13.07-.78c.28 0 .05-.28-.05-.32l-2.17-1.57c-.42-.32-.97-.69-2.03-.6L3.04 2.3c-.46.05-.55.28-.37.46l1.79 1.45zm.69 2.68v13.75c0 .74.37 1.02 1.2.97l14.37-.83c.83-.05.92-.56.92-1.16V5.96c0-.6-.23-.92-.74-.88l-15.01.88c-.55.05-.74.32-.74.93zm14.18.69c.09.42 0 .83-.42.88l-.7.14v10.26c-.6.32-1.16.51-1.62.51-.74 0-.93-.23-1.48-.93l-4.53-7.12v6.89l1.44.33s0 .83-1.15.83l-3.19.18c-.09-.18 0-.65.32-.74l.84-.23v-9.19l-1.16-.1c-.09-.41.14-1.01.79-1.06l3.42-.23 4.71 7.21v-6.38l-1.2-.14c-.09-.51.28-.88.74-.92l3.19-.19zM2.85 1.1l13.16-.97c1.62-.14 2.03-.05 3.05.69l4.2 2.96c.7.51.93.65.93 1.2v16.22c0 1.02-.37 1.62-1.66 1.71l-15.29.92c-.97.05-1.43-.09-1.94-.74l-3.1-4.02c-.55-.74-.78-1.29-.78-1.94V2.72c0-.83.37-1.52 1.43-1.62z"/></svg>
-                        <span class="mono">Notion</span>
-                    </a>
+                    <a href="#work" class="btn btn-solid">View work</a>
+                    <a href="#contact" class="btn btn-line">Get in touch</a>
                 </div>
             </div>
-
             <div class="hero-portrait reveal">
-                <div class="portrait-frame">
-                    <span class="frame-corner tl"></span>
-                    <span class="frame-corner tr"></span>
-                    <span class="frame-corner bl"></span>
-                    <span class="frame-corner br"></span>
-                    <!-- ===== PLACEHOLDER: replace assets/profile.jpg with your professional photo ===== -->
-                    <img src="assets/profile.jpg" alt="Portrait of Zain Naqvi" class="portrait-img" width="420" height="500">
-                    <div class="portrait-hud mono" aria-hidden="true">
-                        <span class="hud-dot"></span> SYS_STATUS: ONLINE
-                    </div>
-                </div>
+                <!-- PLACEHOLDER: replace assets/profile.jpg with your photo -->
+                <img src="assets/profile.jpg" alt="Zain Naqvi" width="320" height="380">
             </div>
         </div>
+    </section>
 
-        <a href="#about" class="scroll-cue mono" aria-label="Scroll to About">
-            <span>scroll</span>
-            <span class="scroll-arrow">▾</span>
-        </a>
+    <!-- ================= SELECTED WORK ================= -->
+    <section class="section" id="work">
+        <div class="container">
+            <div class="section-head reveal">
+                <h2 class="section-title">Selected Work</h2>
+                <p class="section-note">Eight projects across firmware, robotics, and applied ML.
+                    Click any project for the full write-up.</p>
+            </div>
+
+            <div class="work-grid">
+
+                <!-- ===== 01 · Dancing Robot ===== -->
+                <a class="work-card reveal" href="project.html?p=dancing-robot" style="--accent:#8b7cff">
+                    <div class="work-media">
+                        <img src="assets/projects/project-1.jpg" alt="Dancing Robot" loading="lazy"
+                             onerror="this.closest('.work-media').classList.add('no-img');this.remove();">
+                        <span class="media-tag mono">01</span>
+                    </div>
+                    <div class="work-body">
+                        <h3 class="work-title">Dancing Robot</h3>
+                        <p class="work-desc">Two-legged Arduino robot with ultrasonic-driven movement, custom dance routines, and LED-matrix eyes — fully hand-fabricated.</p>
+                        <div class="work-foot">
+                            <ul class="tags"><li>Arduino</li><li>C++</li><li>Robotics</li></ul>
+                            <span class="work-arrow" aria-hidden="true">→</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- ===== 02 · Smart Luggage Transport ===== -->
+                <a class="work-card reveal" href="project.html?p=smart-luggage" style="--accent:#38bdf8">
+                    <div class="work-media">
+                        <img src="assets/projects/project-2.jpg" alt="Smart Luggage Transport System" loading="lazy"
+                             onerror="this.closest('.work-media').classList.add('no-img');this.remove();">
+                        <span class="media-tag mono">02</span>
+                    </div>
+                    <div class="work-body">
+                        <h3 class="work-title">Smart Luggage Transport</h3>
+                        <p class="work-desc">A QArm-driven system that moves luggage between elevation levels using 3D-printed parts, laser-cut gears, and automated scan-and-sort.</p>
+                        <div class="work-foot">
+                            <ul class="tags"><li>QArm</li><li>Python</li><li>Automation</li></ul>
+                            <span class="work-arrow" aria-hidden="true">→</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- ===== 03 · MacroSnap ===== -->
+                <a class="work-card reveal" href="project.html?p=macrosnap" style="--accent:#4ade80">
+                    <div class="work-media">
+                        <img src="assets/projects/project-3.jpg" alt="MacroSnap" loading="lazy"
+                             onerror="this.closest('.work-media').classList.add('no-img');this.remove();">
+                        <span class="media-tag mono">03</span>
+                    </div>
+                    <div class="work-body">
+                        <h3 class="work-title">MacroSnap <em class="badge">DeltaHacks '25</em></h3>
+                        <p class="work-desc">Snap a meal and an AI vision model returns full nutrition data, with a Cohere-powered assistant giving personalized diet advice.</p>
+                        <div class="work-foot">
+                            <ul class="tags"><li>Computer Vision</li><li>Cohere</li><li>Web</li></ul>
+                            <span class="work-arrow" aria-hidden="true">→</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- ===== 04 · Smart Plant Watering ===== -->
+                <a class="work-card reveal" href="project.html?p=smart-plant" style="--accent:#34d399">
+                    <div class="work-media">
+                        <img src="assets/projects/project-4.jpg" alt="Smart Plant Watering System" loading="lazy"
+                             onerror="this.closest('.work-media').classList.add('no-img');this.remove();">
+                        <span class="media-tag mono">04</span>
+                    </div>
+                    <div class="work-body">
+                        <h3 class="work-title">Smart Plant Watering</h3>
+                        <p class="work-desc">Automated plant monitor that dispenses water from real-time soil-moisture readings, with DHT22 climate sensing and air-quality detection.</p>
+                        <div class="work-foot">
+                            <ul class="tags"><li>Embedded C</li><li>Sensors</li><li>ADC</li></ul>
+                            <span class="work-arrow" aria-hidden="true">→</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- ===== 05 · Stock Movement Predictor ===== -->
+                <a class="work-card reveal" href="project.html?p=stock-predictor" style="--accent:#fbbf24">
+                    <div class="work-media">
+                        <img src="assets/projects/project-5.jpg" alt="Stock Movement Predictor" loading="lazy"
+                             onerror="this.closest('.work-media').classList.add('no-img');this.remove();">
+                        <span class="media-tag mono">05</span>
+                    </div>
+                    <div class="work-body">
+                        <h3 class="work-title">Stock Movement Predictor</h3>
+                        <p class="work-desc">Streamlit app predicting stock direction from live news sentiment (NewsAPI + NLP) correlated with moving averages from market data.</p>
+                        <div class="work-foot">
+                            <ul class="tags"><li>Python</li><li>NLP</li><li>Streamlit</li></ul>
+                            <span class="work-arrow" aria-hidden="true">→</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- ===== 06 · RAG Chatbot ===== -->
+                <a class="work-card reveal" href="project.html?p=rag-chatbot" style="--accent:#f472b6">
+                    <div class="work-media">
+                        <img src="assets/projects/project-6.jpg" alt="RAG Chatbot" loading="lazy"
+                             onerror="this.closest('.work-media').classList.add('no-img');this.remove();">
+                        <span class="media-tag mono">06</span>
+                    </div>
+                    <div class="work-body">
+                        <h3 class="work-title">RAG Chatbot</h3>
+                        <p class="work-desc">Retrieval-augmented chatbot over custom documents — sentence-transformer embeddings, FAISS search, and a local Llama 2 via Ollama.</p>
+                        <div class="work-foot">
+                            <ul class="tags"><li>LLMs</li><li>FAISS</li><li>Ollama</li></ul>
+                            <span class="work-arrow" aria-hidden="true">→</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- ===== 07 · Hand Proximity Detection ===== -->
+                <a class="work-card reveal" href="project.html?p=hand-proximity" style="--accent:#fb7185">
+                    <div class="work-media">
+                        <img src="assets/projects/project-7.jpg" alt="Hand Proximity Detection" loading="lazy"
+                             onerror="this.closest('.work-media').classList.add('no-img');this.remove();">
+                        <span class="media-tag mono">07</span>
+                    </div>
+                    <div class="work-body">
+                        <h3 class="work-title">Hand Proximity Detection</h3>
+                        <p class="work-desc">Real-time CV pipeline tracking hand and object contours, computing which hand is closest to which object, with text-to-speech output.</p>
+                        <div class="work-foot">
+                            <ul class="tags"><li>OpenCV</li><li>Python</li><li>TTS</li></ul>
+                            <span class="work-arrow" aria-hidden="true">→</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- ===== 08 · Movie Recommender ===== -->
+                <a class="work-card reveal" href="project.html?p=movie-recommender" style="--accent:#a78bfa">
+                    <div class="work-media">
+                        <img src="assets/projects/project-8.jpg" alt="Movie Recommendation System" loading="lazy"
+                             onerror="this.closest('.work-media').classList.add('no-img');this.remove();">
+                        <span class="media-tag mono">08</span>
+                    </div>
+                    <div class="work-body">
+                        <h3 class="work-title">Movie Recommender</h3>
+                        <p class="work-desc">Content-based recommendation engine using TF-IDF vectorization and cosine similarity over film descriptions, served through Streamlit.</p>
+                        <div class="work-foot">
+                            <ul class="tags"><li>TF-IDF</li><li>ML</li><li>Streamlit</li></ul>
+                            <span class="work-arrow" aria-hidden="true">→</span>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+        </div>
     </section>
 
     <!-- ================= ABOUT ================= -->
-    <section class="section" id="about">
-        <div class="container">
-            <h2 class="section-title reveal"><span class="title-index mono">01.</span> About</h2>
-            <div class="about-grid">
-                <div class="about-text reveal">
-                    <!-- ===== PLACEHOLDER: edit your professional summary below ===== -->
-                    <p>
-                        I'm a Computer Engineering student at McMaster University working at the
-                        intersection of <strong>hardware and software</strong>. My focus is firmware
-                        and embedded systems — writing the low-level code that makes hardware come alive,
-                        and designing the boards it runs on.
-                    </p>
-                    <p>
-                        Through robotics teams and personal projects I've worked across the full stack
-                        of an embedded product: PCB design in Altium, communication protocols like
-                        <strong>CAN, SPI, I²C and UART</strong>, sensor integration and validation,
-                        and higher-level work in <strong>computer vision and machine learning</strong>.
-                    </p>
-                    <p>
-                        I'm looking for opportunities in firmware, embedded systems, robotics, and
-                        software engineering where I can ship real hardware.
-                    </p>
-                </div>
-                <aside class="about-panel reveal">
-                    <p class="panel-label mono">// focus_areas</p>
-                    <ul class="focus-list mono">
-                        <li><span class="focus-marker">▸</span> Firmware &amp; RTOS</li>
-                        <li><span class="focus-marker">▸</span> Embedded Systems</li>
-                        <li><span class="focus-marker">▸</span> Robotics</li>
-                        <li><span class="focus-marker">▸</span> PCB Design</li>
-                        <li><span class="focus-marker">▸</span> Computer Vision</li>
-                        <li><span class="focus-marker">▸</span> Software Development</li>
-                    </ul>
-                </aside>
-            </div>
-        </div>
-    </section>
-
-    <!-- ================= EDUCATION ================= -->
-    <section class="section" id="education">
-        <div class="container">
-            <h2 class="section-title reveal"><span class="title-index mono">02.</span> Education</h2>
-            <div class="edu-card reveal">
-                <div class="edu-head">
-                    <div>
-                        <!-- ===== PLACEHOLDER: edit university / degree details ===== -->
-                        <h3 class="edu-school">McMaster University</h3>
-                        <p class="edu-degree">B.Eng. — Computer Engineering (Co-op)</p>
-                    </div>
-                    <div class="edu-meta mono">
-                        <span class="edu-dates">2024 — 2028</span>
-                        <span class="edu-gpa">GPA: 3.9 / 4.0</span>
-                    </div>
-                </div>
-                <div class="edu-body">
-                    <div class="edu-block">
-                        <p class="panel-label mono">// relevant_coursework</p>
-                        <!-- ===== PLACEHOLDER: replace with your actual courses ===== -->
-                        <ul class="chip-list">
-                            <li class="chip">Digital Logic Design</li>
-                            <li class="chip">Data Structures &amp; Algorithms</li>
-                            <li class="chip">Circuit Analysis</li>
-                            <li class="chip">Computer Architecture</li>
-                            <li class="chip">Embedded Systems</li>
-                            <li class="chip">Signals &amp; Systems</li>
-                        </ul>
-                    </div>
-                    <div class="edu-block">
-                        <p class="panel-label mono">// awards</p>
-                        <!-- ===== PLACEHOLDER: replace with your actual awards / scholarships ===== -->
-                        <ul class="award-list">
-                            <li>Award / Scholarship placeholder — edit me</li>
-                            <li>Dean's Honour List placeholder — edit me</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ================= EXPERIENCE ================= -->
-    <section class="section" id="experience">
-        <div class="container">
-            <h2 class="section-title reveal"><span class="title-index mono">03.</span> Experience</h2>
-            <div class="timeline">
-
-                <article class="tl-item reveal">
-                    <div class="tl-node" aria-hidden="true"></div>
-                    <div class="tl-card">
-                        <header class="tl-head">
-                            <h3>Electrical Subteam Member</h3>
-                            <span class="tl-org">McMaster RoboSub — Autonomous Underwater Vehicle</span>
-                            <span class="tl-date mono">2024 — Present</span>
-                        </header>
-                        <ul class="tl-points">
-                            <li>Designed custom PCBs and schematics in Altium Designer, integrated with the AUV's system architecture.</li>
-                            <li>Selected and validated IMUs (MPU6050) for underwater navigation; simulated sensor behavior in Wokwi.</li>
-                            <li>Researched and authored a CAN bus implementation plan to optimize inter-microcontroller communication.</li>
-                            <li>Simulated Doppler Velocity Log (DVL) behavior for underwater localization; evaluated waterproofing strategies (O-rings, cable glands, heat-shrink).</li>
-                        </ul>
-                        <ul class="chip-list">
-                            <li class="chip">Altium</li><li class="chip">CAN</li><li class="chip">IMU</li><li class="chip">Arduino</li>
-                        </ul>
-                    </div>
-                </article>
-
-                <article class="tl-item reveal">
-                    <div class="tl-node" aria-hidden="true"></div>
-                    <div class="tl-card">
-                        <header class="tl-head">
-                            <h3>Electrical Subteam Member</h3>
-                            <span class="tl-org">McMaster Aerial Robotics &amp; Drones Club</span>
-                            <span class="tl-date mono">2024 — Present</span>
-                        </header>
-                        <ul class="tl-points">
-                            <li>Designed custom PCBs and schematics in Altium Designer for UAV electrical systems.</li>
-                            <li>Completed advanced PCB coursework: multilayer design, ground/power planes, trace routing, and signal integrity.</li>
-                        </ul>
-                        <ul class="chip-list">
-                            <li class="chip">Altium</li><li class="chip">PCB Design</li><li class="chip">Signal Integrity</li>
-                        </ul>
-                    </div>
-                </article>
-
-                <article class="tl-item reveal">
-                    <div class="tl-node" aria-hidden="true"></div>
-                    <div class="tl-card">
-                        <header class="tl-head">
-                            <h3>Social Media Coordinator</h3>
-                            <span class="tl-org">McMaster Engineering Society (MES)</span>
-                            <span class="tl-date mono">2024 — Present</span>
-                        </header>
-                        <ul class="tl-points">
-                            <li>Managed online engagement and communications across platforms, boosting visibility of MES initiatives.</li>
-                        </ul>
-                    </div>
-                </article>
-
-                <article class="tl-item reveal">
-                    <div class="tl-node" aria-hidden="true"></div>
-                    <div class="tl-card">
-                        <header class="tl-head">
-                            <h3>Social Media Manager</h3>
-                            <span class="tl-org">McMaster First Year Council</span>
-                            <span class="tl-date mono">2024 — Present</span>
-                        </header>
-                        <ul class="tl-points">
-                            <li>Managed the council's social media presence and student-facing communications.</li>
-                        </ul>
-                    </div>
-                </article>
-
-                <article class="tl-item reveal">
-                    <div class="tl-node" aria-hidden="true"></div>
-                    <div class="tl-card">
-                        <header class="tl-head">
-                            <h3>Intern — Team Lead</h3>
-                            <span class="tl-org">WWF Pakistan</span>
-                            <span class="tl-date mono">2021 — 2023</span>
-                        </header>
-                        <ul class="tl-points">
-                            <li>Led a team of interns promoting awareness of plastic pollution and sustainable resource use.</li>
-                            <li>Conducted surveys, designed educational content, and presented findings to the WWF executive team.</li>
-                        </ul>
-                    </div>
-                </article>
-
-                <article class="tl-item reveal">
-                    <div class="tl-node" aria-hidden="true"></div>
-                    <div class="tl-card">
-                        <header class="tl-head">
-                            <h3>Volunteer Tutor</h3>
-                            <span class="tl-org">Pehli Kiran School</span>
-                            <span class="tl-date mono">2021 — 2023</span>
-                        </header>
-                        <ul class="tl-points">
-                            <li>Tutored students across multiple subjects and supported the planning and execution of school events.</li>
-                        </ul>
-                    </div>
-                </article>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- ================= PROJECTS ================= -->
-    <section class="section" id="projects">
-        <div class="container">
-            <h2 class="section-title reveal"><span class="title-index mono">04.</span> Projects</h2>
-            <p class="section-sub reveal">Full documentation for each project lives on Notion — source code is linked from there.</p>
-
-            <div class="projects-grid">
-
-                <!-- ============ PROJECT 1 ============ -->
-                <article class="proj-card reveal">
-                    <div class="proj-media">
-                        <!-- ===== PLACEHOLDER: add assets/projects/project-1.jpg (image auto-appears once the file exists) ===== -->
-                        <img src="assets/projects/project-1.jpg" alt="Dancing Robot" loading="lazy" onerror="this.closest('.proj-media').classList.add('no-img'); this.remove();">
-                        <div class="media-fallback mono" aria-hidden="true">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="5" y="5" width="14" height="14" rx="2"/><path d="M9 1v4M15 1v4M9 19v4M15 19v4M1 9h4M1 15h4M19 9h4M19 15h4"/><rect x="9" y="9" width="6" height="6"/></svg>
-                            <span>IMG_PLACEHOLDER</span>
-                        </div>
-                    </div>
-                    <div class="proj-body">
-                        <h3 class="proj-title">Dancing Robot</h3>
-                        <p class="proj-desc">Two-legged robot on an Arduino Nano with ultrasonic-driven movement, custom dance routines, and LED-matrix animated eyes. Fully hand-fabricated: cut, drilled, and soldered.</p>
-                        <ul class="chip-list">
-                            <li class="chip">Arduino</li><li class="chip">C++</li><li class="chip">Ultrasonic</li><li class="chip">Soldering</li>
-                        </ul>
-                        <div class="proj-links">
-                            <!-- ===== PLACEHOLDER: replace href="#" with the project's Notion page URL ===== -->
-                            <a href="#" class="btn btn-primary btn-sm" target="_blank" rel="noopener">View Project ↗</a>
-                            <!-- ===== PLACEHOLDER: replace href="#" with the project's GitHub repo URL ===== -->
-                            <a href="#" class="btn btn-ghost btn-sm" target="_blank" rel="noopener">GitHub</a>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- ============ PROJECT 2 ============ -->
-                <article class="proj-card reveal">
-                    <div class="proj-media">
-                        <!-- ===== PLACEHOLDER: add assets/projects/project-2.jpg ===== -->
-                        <img src="assets/projects/project-2.jpg" alt="Smart Plant Watering System" loading="lazy" onerror="this.closest('.proj-media').classList.add('no-img'); this.remove();">
-                        <div class="media-fallback mono" aria-hidden="true">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="5" y="5" width="14" height="14" rx="2"/><path d="M9 1v4M15 1v4M9 19v4M15 19v4M1 9h4M1 15h4M19 9h4M19 15h4"/><rect x="9" y="9" width="6" height="6"/></svg>
-                            <span>IMG_PLACEHOLDER</span>
-                        </div>
-                    </div>
-                    <div class="proj-body">
-                        <h3 class="proj-title">Smart Plant Watering System</h3>
-                        <p class="proj-desc">Automated plant monitor that dispenses water from real-time soil-moisture readings, with DHT22 temperature/humidity sensing, gas-based air-quality detection, and servo-actuated watering.</p>
-                        <ul class="chip-list">
-                            <li class="chip">Embedded C</li><li class="chip">ADC</li><li class="chip">Sensors</li><li class="chip">Servo Control</li>
-                        </ul>
-                        <div class="proj-links">
-                            <!-- ===== PLACEHOLDER: Notion URL ===== -->
-                            <a href="#" class="btn btn-primary btn-sm" target="_blank" rel="noopener">View Project ↗</a>
-                            <!-- ===== PLACEHOLDER: GitHub URL ===== -->
-                            <a href="#" class="btn btn-ghost btn-sm" target="_blank" rel="noopener">GitHub</a>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- ============ PROJECT 3 ============ -->
-                <article class="proj-card reveal">
-                    <div class="proj-media">
-                        <!-- ===== PLACEHOLDER: add assets/projects/project-3.jpg ===== -->
-                        <img src="assets/projects/project-3.jpg" alt="Smart Luggage Transport System" loading="lazy" onerror="this.closest('.proj-media').classList.add('no-img'); this.remove();">
-                        <div class="media-fallback mono" aria-hidden="true">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="5" y="5" width="14" height="14" rx="2"/><path d="M9 1v4M15 1v4M9 19v4M15 19v4M1 9h4M1 15h4M19 9h4M19 15h4"/><rect x="9" y="9" width="6" height="6"/></svg>
-                            <span>IMG_PLACEHOLDER</span>
-                        </div>
-                    </div>
-                    <div class="proj-body">
-                        <h3 class="proj-title">Smart Luggage Transport System</h3>
-                        <p class="proj-desc">Team-built system that moves luggage safely between elevation levels using custom 3D-printed parts, laser-cut gears, a rotary actuator, and a QArm programmed for automated scanning and sorting.</p>
-                        <ul class="chip-list">
-                            <li class="chip">QArm</li><li class="chip">3D Printing</li><li class="chip">Automation</li><li class="chip">Python</li>
-                        </ul>
-                        <div class="proj-links">
-                            <!-- ===== PLACEHOLDER: Notion URL ===== -->
-                            <a href="#" class="btn btn-primary btn-sm" target="_blank" rel="noopener">View Project ↗</a>
-                            <!-- ===== PLACEHOLDER: GitHub URL ===== -->
-                            <a href="#" class="btn btn-ghost btn-sm" target="_blank" rel="noopener">GitHub</a>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- ============ PROJECT 4 ============ -->
-                <article class="proj-card reveal">
-                    <div class="proj-media">
-                        <!-- ===== PLACEHOLDER: add assets/projects/project-4.jpg ===== -->
-                        <img src="assets/projects/project-4.jpg" alt="MacroSnap" loading="lazy" onerror="this.closest('.proj-media').classList.add('no-img'); this.remove();">
-                        <div class="media-fallback mono" aria-hidden="true">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="5" y="5" width="14" height="14" rx="2"/><path d="M9 1v4M15 1v4M9 19v4M15 19v4M1 9h4M1 15h4M19 9h4M19 15h4"/><rect x="9" y="9" width="6" height="6"/></svg>
-                            <span>IMG_PLACEHOLDER</span>
-                        </div>
-                    </div>
-                    <div class="proj-body">
-                        <h3 class="proj-title">MacroSnap <span class="proj-badge mono">DeltaHacks 2025</span></h3>
-                        <p class="proj-desc">Hackathon project for healthy living: scan a meal photo and an AI vision model identifies the food and returns full nutritional data, with a Cohere-powered assistant giving personalized diet advice and recipes.</p>
-                        <ul class="chip-list">
-                            <li class="chip">Computer Vision</li><li class="chip">Cohere AI</li><li class="chip">Python</li><li class="chip">Web</li>
-                        </ul>
-                        <div class="proj-links">
-                            <!-- ===== PLACEHOLDER: Notion URL ===== -->
-                            <a href="#" class="btn btn-primary btn-sm" target="_blank" rel="noopener">View Project ↗</a>
-                            <!-- ===== PLACEHOLDER: GitHub URL ===== -->
-                            <a href="#" class="btn btn-ghost btn-sm" target="_blank" rel="noopener">GitHub</a>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- ============ PROJECT 5 ============ -->
-                <article class="proj-card reveal">
-                    <div class="proj-media">
-                        <!-- ===== PLACEHOLDER: add assets/projects/project-5.jpg ===== -->
-                        <img src="assets/projects/project-5.jpg" alt="RAG-Based Chatbot" loading="lazy" onerror="this.closest('.proj-media').classList.add('no-img'); this.remove();">
-                        <div class="media-fallback mono" aria-hidden="true">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="5" y="5" width="14" height="14" rx="2"/><path d="M9 1v4M15 1v4M9 19v4M15 19v4M1 9h4M1 15h4M19 9h4M19 15h4"/><rect x="9" y="9" width="6" height="6"/></svg>
-                            <span>IMG_PLACEHOLDER</span>
-                        </div>
-                    </div>
-                    <div class="proj-body">
-                        <h3 class="proj-title">RAG Chatbot with Local Knowledge</h3>
-                        <p class="proj-desc">Retrieval-Augmented Generation chatbot answering questions over custom documents — sentence-transformer embeddings, FAISS vector search, and a locally hosted Llama 2 model via Ollama.</p>
-                        <ul class="chip-list">
-                            <li class="chip">LLMs</li><li class="chip">FAISS</li><li class="chip">Ollama</li><li class="chip">Python</li>
-                        </ul>
-                        <div class="proj-links">
-                            <!-- ===== PLACEHOLDER: Notion URL ===== -->
-                            <a href="#" class="btn btn-primary btn-sm" target="_blank" rel="noopener">View Project ↗</a>
-                            <!-- ===== PLACEHOLDER: GitHub URL ===== -->
-                            <a href="#" class="btn btn-ghost btn-sm" target="_blank" rel="noopener">GitHub</a>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- ============ PROJECT 6 ============ -->
-                <article class="proj-card reveal">
-                    <div class="proj-media">
-                        <!-- ===== PLACEHOLDER: add assets/projects/project-6.jpg ===== -->
-                        <img src="assets/projects/project-6.jpg" alt="Hand Proximity Detection" loading="lazy" onerror="this.closest('.proj-media').classList.add('no-img'); this.remove();">
-                        <div class="media-fallback mono" aria-hidden="true">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="5" y="5" width="14" height="14" rx="2"/><path d="M9 1v4M15 1v4M9 19v4M15 19v4M1 9h4M1 15h4M19 9h4M19 15h4"/><rect x="9" y="9" width="6" height="6"/></svg>
-                            <span>IMG_PLACEHOLDER</span>
-                        </div>
-                    </div>
-                    <div class="proj-body">
-                        <h3 class="proj-title">Hand Proximity Detection + TTS</h3>
-                        <p class="proj-desc">Real-time computer vision pipeline that tracks hand and object contours in live video, computes which hand is closest to which object, and announces results through text-to-speech.</p>
-                        <ul class="chip-list">
-                            <li class="chip">OpenCV</li><li class="chip">Python</li><li class="chip">Real-time CV</li><li class="chip">TTS</li>
-                        </ul>
-                        <div class="proj-links">
-                            <!-- ===== PLACEHOLDER: Notion URL ===== -->
-                            <a href="#" class="btn btn-primary btn-sm" target="_blank" rel="noopener">View Project ↗</a>
-                            <!-- ===== PLACEHOLDER: GitHub URL ===== -->
-                            <a href="#" class="btn btn-ghost btn-sm" target="_blank" rel="noopener">GitHub</a>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- ============ PROJECT 7 ============ -->
-                <article class="proj-card reveal">
-                    <div class="proj-media">
-                        <!-- ===== PLACEHOLDER: add assets/projects/project-7.jpg ===== -->
-                        <img src="assets/projects/project-7.jpg" alt="Stock Movement Predictor" loading="lazy" onerror="this.closest('.proj-media').classList.add('no-img'); this.remove();">
-                        <div class="media-fallback mono" aria-hidden="true">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="5" y="5" width="14" height="14" rx="2"/><path d="M9 1v4M15 1v4M9 19v4M15 19v4M1 9h4M1 15h4M19 9h4M19 15h4"/><rect x="9" y="9" width="6" height="6"/></svg>
-                            <span>IMG_PLACEHOLDER</span>
-                        </div>
-                    </div>
-                    <div class="proj-body">
-                        <h3 class="proj-title">Stock Movement Predictor</h3>
-                        <p class="proj-desc">Streamlit app predicting stock direction from real-time news sentiment (NewsAPI + NLP scoring) correlated with Yahoo Finance moving averages — deployed with secure key management.</p>
-                        <ul class="chip-list">
-                            <li class="chip">Python</li><li class="chip">NLP</li><li class="chip">Streamlit</li><li class="chip">APIs</li>
-                        </ul>
-                        <div class="proj-links">
-                            <!-- ===== PLACEHOLDER: Notion URL ===== -->
-                            <a href="#" class="btn btn-primary btn-sm" target="_blank" rel="noopener">View Project ↗</a>
-                            <!-- ===== PLACEHOLDER: GitHub URL ===== -->
-                            <a href="#" class="btn btn-ghost btn-sm" target="_blank" rel="noopener">GitHub</a>
-                        </div>
-                    </div>
-                </article>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- ================= SKILLS ================= -->
-    <section class="section" id="skills">
-        <div class="container">
-            <h2 class="section-title reveal"><span class="title-index mono">05.</span> Skills</h2>
-            <div class="skills-grid">
-
-                <div class="skill-card reveal">
-                    <div class="skill-head">
-                        <svg class="skill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="6" y="6" width="12" height="12" rx="1.5"/><rect x="10" y="10" width="4" height="4"/><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4"/></svg>
-                        <h3>Firmware</h3>
-                    </div>
-                    <ul class="chip-list">
-                        <li class="chip">C</li><li class="chip">C++</li><li class="chip">RTOS</li>
-                        <li class="chip">UART</li><li class="chip">SPI</li><li class="chip">I²C</li>
-                        <li class="chip">CAN</li><li class="chip">Interrupts &amp; DMA</li>
-                    </ul>
-                </div>
-
-                <div class="skill-card reveal">
-                    <div class="skill-head">
-                        <svg class="skill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 6l-5 6 5 6M16 6l5 6-5 6M13 4l-2 16"/></svg>
-                        <h3>Software</h3>
-                    </div>
-                    <ul class="chip-list">
-                        <li class="chip">Python</li><li class="chip">Git</li><li class="chip">Linux</li>
-                        <li class="chip">JavaScript</li><li class="chip">SQL</li><li class="chip">Streamlit</li>
-                    </ul>
-                </div>
-
-                <div class="skill-card reveal">
-                    <div class="skill-head">
-                        <svg class="skill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 12h4l2-7 4 14 2-7h6"/></svg>
-                        <h3>Hardware</h3>
-                    </div>
-                    <ul class="chip-list">
-                        <li class="chip">PCB Design (Altium)</li><li class="chip">Oscilloscopes</li>
-                        <li class="chip">Logic Analyzers</li><li class="chip">Microcontrollers</li>
-                        <li class="chip">Soldering</li><li class="chip">Schematic Capture</li>
-                    </ul>
-                </div>
-
-                <div class="skill-card reveal">
-                    <div class="skill-head">
-                        <svg class="skill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="5" r="2"/><path d="M12 7v3"/><rect x="6" y="10" width="12" height="9" rx="2"/><circle cx="9.5" cy="14" r="1"/><circle cx="14.5" cy="14" r="1"/><path d="M4 13v4M20 13v4"/></svg>
-                        <h3>Robotics &amp; AI</h3>
-                    </div>
-                    <ul class="chip-list">
-                        <li class="chip">ROS</li><li class="chip">Computer Vision</li><li class="chip">OpenCV</li>
-                        <li class="chip">Machine Learning</li><li class="chip">LLMs / RAG</li><li class="chip">Sensor Fusion</li>
-                    </ul>
-                </div>
-
+    <section class="section about" id="about">
+        <div class="container about-inner">
+            <h2 class="section-title reveal">About</h2>
+            <div class="about-body reveal">
+                <!-- PLACEHOLDER: edit your summary -->
+                <p>I'm a Computer Engineering student at McMaster University working at the seam of
+                    hardware and software. My focus is firmware and embedded systems — and I've shipped
+                    real hardware across two robotics teams: <strong>McMaster RoboSub</strong> and the
+                    <strong>Aerial Robotics &amp; Drones Club</strong>, designing PCBs in Altium and
+                    working with protocols like CAN, SPI, I²C, and UART.</p>
+                <p>Beyond firmware, I like building things that reach all the way up the stack —
+                    computer vision, applied ML, and full applications. I'm looking for opportunities
+                    in firmware, embedded systems, robotics, and software engineering.</p>
+                <ul class="about-skills">
+                    <li>Firmware — C / C++ / RTOS</li>
+                    <li>Protocols — CAN / SPI / I²C / UART</li>
+                    <li>Hardware — PCB Design / Oscilloscopes / MCUs</li>
+                    <li>Software — Python / Git / Linux</li>
+                    <li>Robotics &amp; AI — ROS / OpenCV / ML</li>
+                </ul>
             </div>
         </div>
     </section>
 
     <!-- ================= CONTACT ================= -->
-    <section class="section contact-section" id="contact">
-        <div class="container">
-            <h2 class="section-title reveal"><span class="title-index mono">06.</span> Contact</h2>
-            <div class="contact-box reveal">
-                <p class="contact-cta">
-                    Interested in <strong>firmware, robotics, embedded systems, or software engineering</strong> opportunities?
-                    Let's connect.
-                </p>
-                <!-- ===== PLACEHOLDER: replace with your preferred email ===== -->
-                <a href="mailto:zainnaqvi.200621@gmail.com" class="btn btn-primary btn-lg">zainnaqvi.200621@gmail.com</a>
-                <div class="contact-socials">
-                    <!-- ===== PLACEHOLDER: LinkedIn URL ===== -->
-                    <a href="https://www.linkedin.com/in/212z212" class="social-btn" target="_blank" rel="noopener" aria-label="LinkedIn">
-                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-5c0-2.76-2.24-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.27c-.97 0-1.75-.79-1.75-1.76s.78-1.75 1.75-1.75 1.75.78 1.75 1.75-.78 1.76-1.75 1.76zm13.5 12.27h-3v-5.6c0-3.37-4-3.11-4 0v5.6h-3v-11h3v1.77c1.4-2.59 7-2.78 7 2.47v6.76z"/></svg>
-                        <span class="mono">LinkedIn</span>
-                    </a>
-                    <!-- ===== PLACEHOLDER: GitHub URL ===== -->
-                    <a href="https://github.com/Zain-Naqvi-tech" class="social-btn" target="_blank" rel="noopener" aria-label="GitHub">
-                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.63 0-12 5.37-12 12 0 5.3 3.44 9.8 8.21 11.39.6.11.82-.26.82-.58 0-.28-.01-1.04-.02-2.04-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.33-1.76-1.33-1.76-1.09-.74.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.83 2.81 1.3 3.49 1 .11-.78.42-1.31.76-1.61-2.66-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.18 0 0 1-.32 3.3 1.23.96-.27 1.98-.4 3-.4s2.04.13 3 .4c2.28-1.55 3.29-1.23 3.29-1.23.66 1.66.24 2.88.12 3.18.77.84 1.23 1.91 1.23 3.22 0 4.61-2.81 5.62-5.49 5.92.43.37.81 1.1.81 2.22 0 1.61-.01 2.9-.01 3.29 0 .32.21.7.82.58 4.77-1.59 8.2-6.09 8.2-11.39 0-6.63-5.37-12-12-12z"/></svg>
-                        <span class="mono">GitHub</span>
-                    </a>
-                    <!-- ===== PLACEHOLDER: Notion URL ===== -->
-                    <a href="#" class="social-btn" target="_blank" rel="noopener" aria-label="Notion">
-                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.46 4.21c.65.53 1.07.5 2.4.41l13.07-.78c.28 0 .05-.28-.05-.32l-2.17-1.57c-.42-.32-.97-.69-2.03-.6L3.04 2.3c-.46.05-.55.28-.37.46l1.79 1.45zm.69 2.68v13.75c0 .74.37 1.02 1.2.97l14.37-.83c.83-.05.92-.56.92-1.16V5.96c0-.6-.23-.92-.74-.88l-15.01.88c-.55.05-.74.32-.74.93zm14.18.69c.09.42 0 .83-.42.88l-.7.14v10.26c-.6.32-1.16.51-1.62.51-.74 0-.93-.23-1.48-.93l-4.53-7.12v6.89l1.44.33s0 .83-1.15.83l-3.19.18c-.09-.18 0-.65.32-.74l.84-.23v-9.19l-1.16-.1c-.09-.41.14-1.01.79-1.06l3.42-.23 4.71 7.21v-6.38l-1.2-.14c-.09-.51.28-.88.74-.92l3.19-.19zM2.85 1.1l13.16-.97c1.62-.14 2.03-.05 3.05.69l4.2 2.96c.7.51.93.65.93 1.2v16.22c0 1.02-.37 1.62-1.66 1.71l-15.29.92c-.97.05-1.43-.09-1.94-.74l-3.1-4.02c-.55-.74-.78-1.29-.78-1.94V2.72c0-.83.37-1.52 1.43-1.62z"/></svg>
-                        <span class="mono">Notion</span>
-                    </a>
-                </div>
+    <section class="section contact" id="contact">
+        <div class="container contact-inner reveal">
+            <h2 class="contact-title">Let's build something.</h2>
+            <p class="contact-note">Interested in firmware, robotics, embedded systems, or software
+                engineering opportunities? I'd love to hear from you.</p>
+            <!-- PLACEHOLDER: email -->
+            <a href="mailto:zainnaqvi.200621@gmail.com" class="contact-email">zainnaqvi.200621@gmail.com</a>
+            <div class="socials contact-socials">
+                <a href="https://www.linkedin.com/in/212z212" class="social" target="_blank" rel="noopener" aria-label="LinkedIn">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-5c0-2.76-2.24-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.27c-.97 0-1.75-.79-1.75-1.76s.78-1.75 1.75-1.75 1.75.78 1.75 1.75-.78 1.76-1.75 1.76zm13.5 12.27h-3v-5.6c0-3.37-4-3.11-4 0v5.6h-3v-11h3v1.77c1.4-2.59 7-2.78 7 2.47v6.76z"/></svg>
+                </a>
+                <a href="https://github.com/Zain-Naqvi-tech" class="social" target="_blank" rel="noopener" aria-label="GitHub">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.63 0-12 5.37-12 12 0 5.3 3.44 9.8 8.21 11.39.6.11.82-.26.82-.58 0-.28-.01-1.04-.02-2.04-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.33-1.76-1.33-1.76-1.09-.74.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.83 2.81 1.3 3.49 1 .11-.78.42-1.31.76-1.61-2.66-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.18 0 0 1-.32 3.3 1.23.96-.27 1.98-.4 3-.4s2.04.13 3 .4c2.28-1.55 3.29-1.23 3.29-1.23.66 1.66.24 2.88.12 3.18.77.84 1.23 1.91 1.23 3.22 0 4.61-2.81 5.62-5.49 5.92.43.37.81 1.1.81 2.22 0 1.61-.01 2.9-.01 3.29 0 .32.21.7.82.58 4.77-1.59 8.2-6.09 8.2-11.39 0-6.63-5.37-12-12-12z"/></svg>
+                </a>
+                <a href="#" class="social" target="_blank" rel="noopener" aria-label="Notion">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.46 4.21c.65.53 1.07.5 2.4.41l13.07-.78c.28 0 .05-.28-.05-.32l-2.17-1.57c-.42-.32-.97-.69-2.03-.6L3.04 2.3c-.46.05-.55.28-.37.46l1.79 1.45zm.69 2.68v13.75c0 .74.37 1.02 1.2.97l14.37-.83c.83-.05.92-.56.92-1.16V5.96c0-.6-.23-.92-.74-.88l-15.01.88c-.55.05-.74.32-.74.93zm14.18.69c.09.42 0 .83-.42.88l-.7.14v10.26c-.6.32-1.16.51-1.62.51-.74 0-.93-.23-1.48-.93l-4.53-7.12v6.89l1.44.33s0 .83-1.15.83l-3.19.18c-.09-.18 0-.65.32-.74l.84-.23v-9.19l-1.16-.1c-.09-.41.14-1.01.79-1.06l3.42-.23 4.71 7.21v-6.38l-1.2-.14c-.09-.51.28-.88.74-.92l3.19-.19zM2.85 1.1l13.16-.97c1.62-.14 2.03-.05 3.05.69l4.2 2.96c.7.51.93.65.93 1.2v16.22c0 1.02-.37 1.62-1.66 1.71l-15.29.92c-.97.05-1.43-.09-1.94-.74l-3.1-4.02c-.55-.74-.78-1.29-.78-1.94V2.72c0-.83.37-1.52 1.43-1.62z"/></svg>
+                </a>
             </div>
         </div>
     </section>
@@ -576,21 +274,20 @@
     </main>
 
     <footer class="footer">
-        <p class="mono">designed &amp; built by Zain Naqvi · © <span id="year"></span></p>
-        <p class="mono footer-hint">// psst — try clicking my name a few times</p>
+        <span class="mono">© <span id="year"></span> Zain Naqvi</span>
+        <span class="mono footer-hint">click my name a few times</span>
     </footer>
 
-    <!-- ================= EASTER EGG: CIRCUIT RUNNER MINI-GAME ================= -->
+    <!-- ================= EASTER-EGG GAME ================= -->
     <div class="game-modal" id="game-modal" role="dialog" aria-modal="true" aria-label="Hidden mini-game" hidden>
         <div class="game-backdrop" id="game-backdrop"></div>
         <div class="game-window">
             <div class="game-titlebar mono">
-                <span class="hud-dot"></span>
-                <span>circuit_runner.exe — hidden process</span>
-                <button class="game-close" id="game-close" aria-label="Close game">✕</button>
+                <span>circuit_runner</span>
+                <button class="game-close" id="game-close" aria-label="Close">✕</button>
             </div>
             <canvas id="game-canvas" width="640" height="220"></canvas>
-            <p class="game-help mono">SPACE / ↑ / tap to jump · dodge the components</p>
+            <p class="game-help mono">space / ↑ / tap to jump</p>
         </div>
     </div>
 

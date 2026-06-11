@@ -1,49 +1,73 @@
 # Zain Naqvi — Portfolio
 
-Single-page portfolio built with pure HTML / CSS / JavaScript.
-No build step, no dependencies — fully compatible with GitHub Pages.
+A minimal, classy, single-page portfolio in pure HTML / CSS / JavaScript.
+Dark monochrome theme; colour appears on project hover. No build step — deploys to
+GitHub Pages by just pushing the folder.
 
 ## Folder structure
 
 ```
 Website/
-├── index.html          ← all content lives here
+├── index.html          ← the one-page site (hero · work · about · contact)
+├── project.html        ← project detail page (renders a Markdown file)
 ├── css/
-│   └── style.css       ← theme, layout, animations
+│   ├── style.css       ← theme + layout
+│   └── project.css     ← Markdown article typography
 ├── js/
-│   ├── main.js         ← nav, typed text, reveals, PCB canvas, cursor, easter egg
+│   ├── main.js         ← nav, scrollspy, reveals, easter egg
+│   ├── project.js      ← project metadata + Markdown loader
 │   └── game.js         ← hidden "Circuit Runner" mini-game
+├── projects/           ← one Markdown file per project (your write-ups)
+│   ├── dancing-robot.md
+│   ├── smart-luggage.md
+│   ├── macrosnap.md
+│   ├── smart-plant.md
+│   ├── stock-predictor.md
+│   ├── rag-chatbot.md
+│   ├── hand-proximity.md
+│   └── movie-recommender.md
 ├── assets/
-│   ├── profile.jpg     ← REPLACE: your professional photo (portrait, ~4:5)
-│   └── projects/       ← ADD: project-1.jpg … project-7.jpg (16:9 works best)
-├── legacy/             ← backup of the previous site (safe to delete)
+│   ├── profile.jpg     ← REPLACE with your photo (portrait, ~4:5)
+│   └── projects/       ← ADD project-1.jpg … project-8.jpg (16:10 works best)
+├── legacy/             ← backup of the old site (safe to delete)
 └── README.md
 ```
 
-## Things to replace (all marked with `PLACEHOLDER` comments in index.html)
+## How the project pages work
+
+Each card on the home page links to `project.html?p=<slug>`. That page:
+
+1. reads the slug from the URL,
+2. pulls the title / tags / links / accent colour from the `PROJECTS` map in
+   [`js/project.js`](js/project.js), and
+3. fetches `projects/<slug>.md` and renders it as the page body.
+
+**To write a project page, just edit its `.md` file** — paste straight from Notion.
+Markdown, images, code blocks, and tables all render. This works on GitHub Pages because
+the `.md` files are fetched from the same site.
+
+> Note: Markdown loading uses `fetch`, which needs an HTTP server. It works on GitHub
+> Pages and any local server, but **not** by double-clicking the file (`file://`). To
+> preview locally, run `python -m http.server` in this folder and open `localhost:8000`.
+
+## What to replace (search for `PLACEHOLDER`)
 
 | What | Where |
 |---|---|
-| Profile photo | `assets/profile.jpg` (just overwrite the file) |
-| Notion URL | Hero + Contact sections — search `Notion URL` |
-| LinkedIn / GitHub URLs | Pre-filled with your current ones; update if needed |
-| Project images | Drop `project-1.jpg` … `project-7.jpg` into `assets/projects/` — they appear automatically (a styled placeholder shows until then) |
-| Project Notion + GitHub links | Each project card — search `PLACEHOLDER: Notion URL` |
-| Coursework chips | Education section |
-| Awards | Education section |
-| About paragraphs | About section |
-
-Tip: search `index.html` for `PLACEHOLDER` — every editable spot is marked.
+| Profile photo | overwrite `assets/profile.jpg` |
+| Project images | add `assets/projects/project-1.jpg` … `project-8.jpg` (a "no image yet" placeholder shows until then) |
+| Project write-ups | edit the files in `projects/` |
+| Per-project GitHub / Notion links | the `PROJECTS` map in `js/project.js` (change `'#'` to real URLs — buttons appear automatically) |
+| Header & contact social links | `index.html` — LinkedIn / GitHub / Notion |
+| Email | `index.html` contact section |
 
 ## Easter egg
 
-Click the big name in the hero **5 times** → a hidden terminal window opens with
-**Circuit Runner**, a playable mini-game (Space / ↑ / tap to jump). High score is
-saved in localStorage. Close with ✕, Esc, or clicking outside.
+Click the big name in the hero **5 times** → a hidden window opens with **Circuit Runner**,
+a playable mini-game (Space / ↑ / tap to jump). Close with ✕, Esc, or click outside.
 
-## Deploying to GitHub Pages
+## Deploy to GitHub Pages
 
-1. Push this folder to a repo (e.g. `zain-naqvi-tech.github.io` for a root URL,
-   or any repo for `/<repo-name>/`).
-2. Repo → Settings → Pages → Source: `main` branch, `/ (root)`.
-3. Done — everything is relative paths, so it works at any base URL.
+1. Push this folder to a repo.
+2. Settings → Pages → Source: `main` branch, `/ (root)`.
+3. Done — all paths are relative, so it works at any base URL.

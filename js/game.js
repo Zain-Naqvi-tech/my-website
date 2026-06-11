@@ -17,15 +17,15 @@
     const GROUND_Y = 180;
 
     const COLORS = {
-        bg: '#0a0e14',
-        ground: 'rgba(83, 214, 255, 0.5)',
-        grid: 'rgba(83, 214, 255, 0.06)',
-        robot: '#53d6ff',
-        robotEye: '#0a0e14',
-        obstacle: '#7ef29d',
-        obstacleAlt: '#ffb454',
-        text: '#dbe4f0',
-        muted: '#8b9bb4',
+        bg: '#0a0a0b',
+        ground: 'rgba(243, 242, 239, 0.45)',
+        grid: 'rgba(255, 255, 255, 0.05)',
+        robot: '#f3f2ef',
+        robotEye: '#0a0a0b',
+        obstacle: '#9b9a96',
+        obstacleAlt: '#c9c7c1',
+        text: '#f3f2ef',
+        muted: '#9b9a96',
     };
 
     const STATE = { READY: 0, PLAYING: 1, OVER: 2 };
