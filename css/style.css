@@ -345,6 +345,23 @@ ul { list-style: none; }
 }
 .work-card:hover .work-arrow { transform: translate(4px, -4px); color: var(--accent); }
 
+/* ---- "coming soon" card: visible but inert, no hover jump ---- */
+.work-card.is-soon { opacity: .55; cursor: default; }
+.work-card.is-soon:hover { transform: none; border-color: var(--line); }
+.work-card.is-soon:hover::after { opacity: 0; box-shadow: none; }
+.work-card.is-soon:hover .work-media img { filter: grayscale(1) brightness(.82); transform: scale(1.01); }
+.work-card.is-soon:hover .work-title { color: var(--text); }
+.work-card.is-soon:hover .tags li { border-color: var(--line); color: var(--muted); }
+.work-soon {
+    font-size: 11.5px;
+    letter-spacing: .5px;
+    color: var(--muted);
+    border: 1px solid var(--line-2);
+    padding: 3px 9px;
+    border-radius: 999px;
+    white-space: nowrap;
+}
+
 /* ============================================================
    About
    ============================================================ */
