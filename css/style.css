@@ -177,10 +177,7 @@ ul { list-style: none; }
     object-fit: cover;
     border-radius: var(--radius);
     border: 1px solid var(--line);
-    filter: grayscale(1) contrast(1.02);
-    transition: filter .5s ease;
 }
-.hero-portrait:hover img { filter: grayscale(0); }
 
 /* ---------- buttons ---------- */
 .btn {
