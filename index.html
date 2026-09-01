@@ -60,8 +60,7 @@
                 <div class="hero-actions reveal">
                     <a href="#work" class="btn btn-solid">View work</a>
                     <a href="#contact" class="btn btn-line">Get in touch</a>
-                    <!-- PLACEHOLDER: add assets/Zain_Naqvi_Resume.pdf to the repo -->
-                    <a href="assets/Zain_Naqvi_Resume.pdf" class="btn btn-line" download>Download Resume</a>
+                    <a href="assets/Zain_Naqvi_Resume.pdf" class="btn btn-line" target="_blank" rel="noopener">View Resume</a>
                 </div>
             </div>
             <div class="hero-portrait reveal">
@@ -76,7 +75,7 @@
         <div class="container">
             <div class="section-head reveal">
                 <h2 class="section-title">Selected Work</h2>
-                <p class="section-note">Five firmware and systems projects. Click any card for the full write-up.</p>
+                <p class="section-note">Six firmware and systems projects. Click any card for the full write-up.</p>
             </div>
 
             <div class="work-grid">
@@ -149,22 +148,39 @@
                     </div>
                 </a>
 
-                <!-- ===== 05 · ToF 3D Spatial Mapping (coming soon) ===== -->
-                <div class="work-card is-soon reveal" style="--accent:#f472b6" aria-disabled="true">
+                <!-- ===== 05 · ToF 3D Spatial Mapping ===== -->
+                <a class="work-card reveal" href="assets/projects/tof-3d-spatial-mapping.pdf" target="_blank" rel="noopener" style="--accent:#f472b6">
                     <div class="work-media">
-                        <img src="assets/projects/project-5.jpg" alt="ToF 3D Spatial Mapping" loading="lazy"
+                        <img src="assets/projects/Final Project Report_ 3D Spatial Mapping (2) (1).pdf" alt="ToF 3D Spatial Mapping" loading="lazy"
                              onerror="this.closest('.work-media').classList.add('no-img');this.remove();">
                         <span class="media-tag mono">05</span>
                     </div>
                     <div class="work-body">
                         <h3 class="work-title">ToF 3D Spatial Mapping</h3>
-                        <p class="work-desc">A time-of-flight sensor system that reconstructs a 3D spatial map of its environment. Write-up coming soon.</p>
+                        <p class="work-desc">A time-of-flight sensor system that reconstructs a 3D spatial map of its environment.</p>
                         <div class="work-foot">
                             <ul class="tags"><li>Time-of-Flight</li><li>Sensors</li><li>3D Mapping</li></ul>
-                            <span class="work-soon mono">Coming soon</span>
+                            <span class="work-arrow" aria-hidden="true">→</span>
                         </div>
                     </div>
-                </div>
+                </a>
+
+                <!-- ===== 06 · 16-bit CPU in Verilog ===== -->
+                <a class="work-card reveal" href="https://github.com/Zain-Naqvi-tech/16-bit-CPU-Verilog" target="_blank" rel="noopener noreferrer" style="--accent:#2dd4bf">
+                    <div class="work-media">
+                        <img src="assets/projects/project-6.jpg" alt="16-bit CPU in Verilog" loading="lazy"
+                             onerror="this.closest('.work-media').classList.add('no-img');this.remove();">
+                        <span class="media-tag mono">06</span>
+                    </div>
+                    <div class="work-body">
+                        <h3 class="work-title">16-bit CPU in Verilog</h3>
+                        <p class="work-desc">Bottom-up CPU built in Verilog from primitive logic gates up through a 16-bit ALU, register file, program counter, and RAM, with a simulation testbench per module. Nand2Tetris architecture, implemented in Verilog rather than HDL.</p>
+                        <div class="work-foot">
+                            <ul class="tags"><li>Verilog</li><li>RTL Design</li><li>Digital Logic</li><li>Testbench Simulation</li></ul>
+                            <span class="work-arrow" aria-hidden="true">→</span>
+                        </div>
+                    </div>
+                </a>
 
             </div>
         </div>
